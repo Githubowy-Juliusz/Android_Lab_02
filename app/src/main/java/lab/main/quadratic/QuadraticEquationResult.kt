@@ -1,11 +1,7 @@
 package lab.main.quadratic
 
-import kotlin.math.pow
+import lab.main.round
 
-fun round(number: Double, decimalPlaces: Int): Double {
-	val powerOfTen = 10.0.pow(decimalPlaces)
-	return kotlin.math.round(number * powerOfTen) / powerOfTen
-}
 
 class QuadraticEquationResult(
 	val delta: Double,

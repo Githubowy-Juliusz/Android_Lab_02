@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import lab.main.R
+import lab.main.round
 
 class RandomArrayFragment : Fragment(R.layout.fragment_random_array) {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class RandomArrayFragment : Fragment(R.layout.fragment_random_array) {
 			println(arrayContent)
 			val min = array.min().toString()
 			val max = array.max().toString()
-			val avg = array.average().toString()
+			val avg = round(array.average(), 4).toString()
 			val sum = array.sum().toString()
 			arrayContentText.text = "Array: $arrayContent"
 			arrayMinText.text = "Min: $min"

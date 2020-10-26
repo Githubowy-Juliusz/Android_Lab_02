@@ -3,7 +3,8 @@ package lab.main.quadratic
 import android.text.Editable
 import android.text.TextWatcher
 
-class QuadraticEquationTextWatcher(private val solver: Solver) : TextWatcher {
+class QuadraticEquationTextWatcher(private val quadraticEquationUpdater: QuadraticEquationUpdater) :
+	TextWatcher {
 
 	override fun afterTextChanged(s: Editable?) {
 	}
@@ -18,6 +19,6 @@ class QuadraticEquationTextWatcher(private val solver: Solver) : TextWatcher {
 		sequence: CharSequence?, start: Int,
 		before: Int, count: Int
 	) {
-		solver.update()
+		quadraticEquationUpdater.update()
 	}
 }

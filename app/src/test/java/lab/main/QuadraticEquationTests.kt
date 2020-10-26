@@ -1,6 +1,5 @@
 package lab.main
 
-import lab.main.quadratic.round
 import lab.main.quadratic.solveQuadraticEquation
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue

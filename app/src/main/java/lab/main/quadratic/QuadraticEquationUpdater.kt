@@ -3,7 +3,7 @@ package lab.main.quadratic
 import android.widget.EditText
 import android.widget.TextView
 
-class Solver(
+class QuadraticEquationUpdater(
 	private val inputA: EditText,
 	private val inputB: EditText,
 	private val inputC: EditText,

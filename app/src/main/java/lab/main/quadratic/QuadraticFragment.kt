@@ -17,10 +17,10 @@ class QuadraticFragment :
 		val inputC = view.findViewById<EditText>(R.id.quadraticInputC)
 		val deltaText = view.findViewById<TextView>(R.id.quadraticDeltaText)
 		val resultText = view.findViewById<TextView>(R.id.quadraticResultsText)
-		val equationSolver =
-			Solver(inputA, inputB, inputC, deltaText, resultText)
-		inputA.addTextChangedListener(QuadraticEquationTextWatcher(equationSolver))
-		inputB.addTextChangedListener(QuadraticEquationTextWatcher(equationSolver))
-		inputC.addTextChangedListener(QuadraticEquationTextWatcher(equationSolver))
+		val equationUpdater =
+			QuadraticEquationUpdater(inputA, inputB, inputC, deltaText, resultText)
+		inputA.addTextChangedListener(QuadraticEquationTextWatcher(equationUpdater))
+		inputB.addTextChangedListener(QuadraticEquationTextWatcher(equationUpdater))
+		inputC.addTextChangedListener(QuadraticEquationTextWatcher(equationUpdater))
 	}
 }
